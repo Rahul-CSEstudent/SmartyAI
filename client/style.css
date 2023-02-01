@@ -12,29 +12,29 @@ body {
 }
 
 #app {
-  width: 100vw;
-  height: 100vh;
-  background: #343541;
-
+  /* width: 100vw;
+  height: 100vh; */
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-#chat_container {
+ #chat_container {
   flex: 1;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 20px);
+  height: 50%;
   overflow-y: scroll;
-
+  box-shadow: inset 0 0 600px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  left: 10px;
   gap: 10px;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
-
+  margin: 50px;
+  margin-bottom: 10px;
   padding-bottom: 20px;
   scroll-behavior: smooth;
 }
@@ -50,27 +50,29 @@ body {
 }
 
 .ai {
-  background: #40414F;
+  background: #ffffff;
+
+  /* border-top: #000000 1px solid; */
 }
 
 .chat {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  border: #000000 2px solid;
   gap: 10px;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .profile {
   width: 36px;
   height: 36px;
   border-radius: 5px;
-
-  background: #5436DA;
-
+  background: #3c316e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +91,7 @@ body {
 .message {
   flex: 1;
 
-  color: #dcdcdc;
+  color: #000000;
   font-size: 20px;
 
   max-width: 100%;
@@ -113,23 +115,21 @@ body {
 }
 
 form {
-  width: 100%;
+  width: calc(100% - 20px);
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
-
+  background: #bcc5be;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
 textarea {
-  width: 100%;
-
-  color: #fff;
+  width: calc(100% - 20px);
+  color: rgb(0, 0, 0);
   font-size: 18px;
-
   padding: 10px;
   background: transparent;
   border-radius: 5px;
@@ -147,4 +147,35 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #10a37f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.chatbot-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 25rem;
+  height: 35rem;
+  background: white;  
+   /* border-radius: 50%;
+  background: #10a37f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out; */
 }
